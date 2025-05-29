@@ -44,6 +44,10 @@ public class FirebaseController {
         mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
+    public String generatePushKey(String path) {
+        return FirebaseDatabase.getInstance().getReference(path).push().getKey();
+    }
+
     // Initialize the controller in MainActivity
     public static void init(Context context) {
         if (instance == null) {
@@ -125,13 +129,37 @@ public class FirebaseController {
                 });
     }
 
+    public void createData(String path, Map<String, Object> data, boolean addId, final FirebaseCallback callback) {
+        if(addId) {
+            DatabaseReference ref = mDatabase.child(path).push().getRef();
+            data.put("id", ref.getKey());
+            ref.setValue(data)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            callback.onResponse(true, data);
+                        } else {
+                            callback.onResponse(false, null);
+                        }
+                    });
+        }else{
+            mDatabase.child(path).setValue(data)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            callback.onResponse(true, data);
+                        } else {
+                            callback.onResponse(false, null);
+                        }
+                    });
+        }
+    }
+
     public <T> void readData(String path, final FirebaseCallback callback) {
         mDatabase.child(path).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 //                data = snapshot.getValue();
                 if (snapshot.getValue() != null) {
-                    callback.onResponse(true, snapshot.getChildren());
+                    callback.onResponse(true, snapshot/*.getChildren()*/);
                 } else {
                     callback.onResponse(false, null);
                 }

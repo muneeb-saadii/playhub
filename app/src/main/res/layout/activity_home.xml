@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activities.HomeActivity">
+    tools:context=".activities.admin.HomeActivity">
 
 
     <FrameLayout
@@ -29,6 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         >
         <LinearLayout
+            android:id="@+id/navParentLayArea"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="5"
@@ -124,6 +125,79 @@
 
                 <ImageView
                     android:id="@+id/profileImg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_my_profile"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navParentLayAreaUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:layout_marginTop="3dp"
+            android:visibility="gone"
+            android:background="@drawable/bottom_nav_bg"
+            android:backgroundTint="@color/app_themeColor_1"
+            >
+
+            <RelativeLayout
+                android:id="@+id/nav_home1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/homeImg1"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nav_chat1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/chatImg1"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_chats"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nav_booking1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/recordsImg1"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_records"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nav_profile1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/profileImg1"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_centerInParent="true"

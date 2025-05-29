@@ -89,6 +89,7 @@
             android:id="@+id/messagesRecycView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:scrollbars="none"
             android:layout_alignParentTop="true"
             android:layout_above="@id/sendChatArea"

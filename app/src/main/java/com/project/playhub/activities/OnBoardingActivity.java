@@ -9,6 +9,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 import com.project.playhub.R;
+import com.project.playhub.activities.admin.AuthActivity;
 import com.project.playhub.adapters.OnBoardingAdapter;
 import com.project.playhub.databinding.ActivityOnBoardingBinding;
 import com.project.playhub.models.OnBoardingModel;

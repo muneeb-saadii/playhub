@@ -82,7 +82,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatVi
         if (adminImage != null && !adminImage.isEmpty()) {
             Glide.with(context).load(adminImage).into(holder.image);
         } else {
-            holder.image.setImageResource(R.drawable.profile_pic); // fallback image
+            holder.image.setImageResource(R.drawable.ic_no_pic_user); // fallback image
         }
     }
 

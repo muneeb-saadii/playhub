@@ -34,13 +34,31 @@
         android:theme="@style/Theme.Play"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ViewSlotsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PersonalDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BankDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VenueDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.ManageSlotsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.AddVenueActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.HomeActivity"
+            android:name=".activities.admin.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.AuthActivity"
+            android:name=".activities.admin.AuthActivity"
             android:exported="false" />
         <activity
             android:name=".activities.OnBoardingActivity"

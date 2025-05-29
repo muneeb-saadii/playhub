@@ -12,20 +12,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
 import com.project.playhub.R;
-import com.project.playhub.activities.HomeActivity;
+import com.project.playhub.activities.admin.HomeActivity;
 import com.project.playhub.adapters.ChatListAdapter;
 import com.project.playhub.controller.FirebaseController;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
 public class ChatFragment extends Fragment {
 
+    private String TAG = ChatFragment.class.getSimpleName();
     private HomeActivity act;
     private RecyclerView recyclerView;
     private ChatListAdapter adapter;
@@ -47,19 +46,6 @@ public class ChatFragment extends Fragment {
         loadChats();
     }
 
-    private void loadChat() {
-
-        act.mController.readData("chats", (isSuccess, data) -> {
-            if (isSuccess) {
-                DataSnapshot snapshot = (DataSnapshot) data;
-                for (DataSnapshot chatNode : snapshot.getChildren()) {
-
-                }
-
-                Log.d("chats", ""+data.toString());
-            }
-        });
-    }
     private void loadChats() {
         act.mController.fetchUserChats(true, new FirebaseController.FirebaseCallback() {
             @Override
@@ -67,6 +53,7 @@ public class ChatFragment extends Fragment {
                 if (isSuccess && data instanceof Map) {
                     chatList.clear();
                     Map<String, Object> result = (Map<String, Object>) data;
+                    Log.d(TAG, "onResponse: "+result);
 
                     for (String key : result.keySet()) {
                         Object chatObj = result.get(key);

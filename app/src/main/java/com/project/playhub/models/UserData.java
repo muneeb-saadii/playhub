@@ -8,6 +8,7 @@ public class UserData {
     private String email;
     private String id;
     private String isAdmin;
+    private Object bank_details = null;
 
     public UserData(String id, String image, String name, String email, String isAdmin) {
         this.id = id;

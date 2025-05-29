@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.project.playhub.activities.AuthActivity;
+import com.project.playhub.activities.admin.AuthActivity;
 import com.project.playhub.databinding.DoubleCardLayoutBinding;
 import com.project.playhub.databinding.LayoutOtpSixDigitsBinding;
 

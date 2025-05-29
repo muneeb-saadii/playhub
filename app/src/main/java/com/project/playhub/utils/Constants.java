@@ -19,7 +19,11 @@ public class Constants {
 
 
     public static String FIREBASE_DB_PATH_USER_NODE = "Users";
-    public static String FIREBASE_DB_PATH_CHAT_NODE = "chats";
+    public static String FIREBASE_DB_PATH_CHAT_NODE = "Chats";
+    public static String FIREBASE_DB_PATH_VENUES_NODE = "Venues";
+    public static String FIREBASE_DB_PATH_BOOKINGS_NODE = "Bookings";
+
+
     public static String FIREBASE_DB_USER_PREFIX = "users_";
     public static String FIREBASE_DB_ADMIN_PREFIX = "admin_";
 

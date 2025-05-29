@@ -7,7 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,15 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
-import com.project.playhub.R;
-import com.project.playhub.activities.AuthActivity;
-import com.project.playhub.activities.HomeActivity;
-import com.project.playhub.activities.MainActivity;
+import com.project.playhub.activities.admin.AuthActivity;
+import com.project.playhub.activities.admin.HomeActivity;
 import com.project.playhub.databinding.DoubleCardLayoutBinding;
 import com.project.playhub.utils.Constants;
-import com.project.playhub.utils.SharedPrefsManager;
 
 import java.util.HashMap;
 
@@ -86,11 +81,11 @@ public class SigninFragment extends Fragment {
     }
 
     private void setUserData(DataSnapshot user) {
-        HashMap<String, String> data = (HashMap<String, String>) user.getValue();
+        HashMap<String, Object> data = (HashMap<String, Object>) user.getValue();
         act.prefsManager.saveMap(Constants.PREFS_FIREBASE_USER, data);
         act.prefsManager.saveString(Constants.PREFS_IS_LOGIN, "yes");
-        act.prefsManager.saveString(Constants.PREFS_IS_ADMIN, data.get("isAdmin"));
-        act.prefsManager.saveString(Constants.PREFS_USER_ID, data.get("id"));
+        act.prefsManager.saveString(Constants.PREFS_IS_ADMIN, data.get("isAdmin").toString());
+        act.prefsManager.saveString(Constants.PREFS_USER_ID, data.get("id").toString());
         /*act.mController.readData(FIREBASE_DB_PATH_USER+"/"+user.getUid(), b.etField3.getText().toString(), (isSuccess, data) -> {
             if (isSuccess) {
                 FirebaseUser user = (FirebaseUser) data;

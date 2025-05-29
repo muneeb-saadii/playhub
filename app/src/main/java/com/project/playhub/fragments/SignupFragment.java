@@ -2,6 +2,8 @@ package com.project.playhub.fragments;
 
 import static android.app.PendingIntent.getActivity;
 
+import static com.project.playhub.utils.Constants.FIREBASE_DB_PATH_USER_NODE;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,11 +17,12 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseUser;
-import com.project.playhub.R;
-import com.project.playhub.activities.AuthActivity;
+import com.project.playhub.activities.admin.AuthActivity;
 import com.project.playhub.controller.FirebaseController;
 import com.project.playhub.databinding.DoubleCardLayoutBinding;
 import com.project.playhub.models.UserData;
+
+import java.util.HashMap;
 
 
 public class SignupFragment extends Fragment {
@@ -74,8 +77,15 @@ public class SignupFragment extends Fragment {
                     FirebaseUser user = (FirebaseUser) data;
                     UserData userData = new UserData(user.getUid(), "", name, email, "No");
 
-                    // Store user data in Realtime Database under "Users/userId"
-                    FirebaseController.getInstance().createData("Users/" + user.getUid(), userData, (dbSuccess, dbData) -> {
+                    HashMap<String, Object> userDetail = new HashMap<>();
+                    userDetail.put("id", user.getUid());
+                    userDetail.put("name", name);
+                    userDetail.put("email", email);
+                    userDetail.put("isAdmin", "No");
+                    userDetail.put("image", "");
+
+//                    FirebaseController.getInstance().createData("Users/" + user.getUid(), userData, (dbSuccess, dbData) -> {
+                    FirebaseController.getInstance().createData(FIREBASE_DB_PATH_USER_NODE+"/"+user.getUid(), userDetail, false, (dbSuccess, dbData) -> {
                         if (dbSuccess) {
                             Toast.makeText(getContext(), "Sign Up Successful!", Toast.LENGTH_SHORT).show();
                             if (getActivity() instanceof AuthActivity) {

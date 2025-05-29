@@ -2,10 +2,13 @@
     <string name="app_name">PlayHub</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="search_health_issue">Search health issue....</string>
+    <string name="search_health_issue">Search venues..</string>
     <string name="neeed_a_helping_hand_today">Neeed a helping hand today</string>
     <string name="categories">Categories</string>
 
     <string name="chats">Chats</string>
+    <string name="add_venue_note">Note: This venue will be shown to customers and they will be able to book your provided slots.</string>
+    <string name="add_bank_info_note">Note: This information will be shown to your customers by which they can transfer money to your account.</string>
+    <string name="venue_detail">Venue Details</string>
 
 </resources>

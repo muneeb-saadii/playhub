@@ -13,6 +13,7 @@
         android:paddingHorizontal="16dp"
         android:paddingVertical="24dp"
         android:background="@drawable/bg_home_top_bar"
+        android:backgroundTint="@color/appTheme_accent_2"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp">
 
@@ -23,15 +24,15 @@
             android:background="@color/transparent"
             android:src="@drawable/ic_home_profile_menu"
             app:tint="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/profile_pic"
+            app:layout_constraintBottom_toBottomOf="@+id/user_profile"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/profile_pic" />
+            app:layout_constraintTop_toTopOf="@+id/user_profile" />
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
-            android:id="@+id/profile_pic"
+            android:id="@+id/user_profile"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/profile_pic"
+            android:background="@drawable/ic_no_pic_user"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:round="12dp" />
@@ -54,206 +55,84 @@
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
+            app:layout_constraintTop_toBottomOf="@+id/user_profile" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Welcome ZAM!"
-        android:textStyle="bold"
-        android:textColor="@color/textview_secondary_dark"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:maxLines="2"
-        android:textColor="@color/textview_secondary_dark"
-        android:text="@string/neeed_a_helping_hand_today"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/categories"
-        android:textColor="@color/textview_accent_dark"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-        <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
+            >
+            <TextView
+                android:id="@+id/welcomeTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Welcome ZAM!"
+                android:textStyle="bold"
+                android:textColor="@color/textview_secondary_dark"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
-                <androidx.constraintlayout.utils.widget.ImageFilterView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@color/light_blue_A400"
-                    app:round="12dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="marquee"
-                    android:gravity="center"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="1"
-                    android:textColor="@color/textview_accent_dark"
-                    android:textSize="13sp"
-                    android:singleLine="true"
-                    android:text="All" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/welcomeTxt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:textColor="@color/textview_secondary_dark"
+                android:text="@string/neeed_a_helping_hand_today"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeTxt" />
 
-                <androidx.constraintlayout.utils.widget.ImageFilterView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@color/light_blue_A400"
-                    app:round="12dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="marquee"
-                    android:gravity="center"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="1"
-                    android:textColor="@color/textview_accent_dark"
-                    android:textSize="13sp"
-                    android:singleLine="true"
-                    android:text="All" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/venuesRecycView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:scrollbars="vertical"
+                android:paddingBottom="100dp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_applications"
+                app:layout_constraintTop_toBottomOf="@id/welcomeTxt2"
+                />
 
-                <androidx.constraintlayout.utils.widget.ImageFilterView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@color/light_blue_A400"
-                    app:round="12dp" />
+            <TextView
+                android:id="@+id/noDataTxt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="No data available"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:gravity="center_vertical|center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/welcomeTxt2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="marquee"
-                    android:gravity="center"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="1"
-                    android:textColor="@color/textview_accent_dark"
-                    android:textSize="13sp"
-                    android:singleLine="true"
-                    android:text="All" />
-            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/venuesRecycView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <androidx.constraintlayout.utils.widget.ImageFilterView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@color/light_blue_A400"
-                    app:round="12dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="marquee"
-                    android:gravity="center"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="1"
-                    android:textColor="@color/textview_accent_dark"
-                    android:textSize="13sp"
-                    android:singleLine="true"
-                    android:text="All" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <androidx.constraintlayout.utils.widget.ImageFilterView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@color/light_blue_A400"
-                    app:round="12dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="marquee"
-                    android:gravity="center"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:maxLines="1"
-                    android:textColor="@color/textview_accent_dark"
-                    android:textSize="13sp"
-                    android:singleLine="true"
-                    android:text="All" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        tools:listitem="@layout/item_applications" />
 </androidx.constraintlayout.widget.ConstraintLayout>

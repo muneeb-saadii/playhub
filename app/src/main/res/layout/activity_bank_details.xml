@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:id="@+id/backImgView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_back"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="20dp"
+            >
+            <EditText
+                android:id="@+id/bankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Enter Bank Name"
+                android:letterSpacing="0.05"
+                android:inputType="text"
+                android:textColorHint="@color/edittext_hint"
+                android:maxLines="1"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/edittext_back"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/edittext_text"
+                />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Enter Account Title"
+                android:letterSpacing="0.05"
+                android:inputType="text"
+                android:textColorHint="@color/edittext_hint"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/edittext_back"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/edittext_text"
+                android:layout_marginVertical="14dp"
+                />
+
+            <EditText
+                android:id="@+id/accNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Enter Account Number"
+                android:letterSpacing="0.05"
+                android:inputType="number"
+                android:textColorHint="@color/edittext_hint"
+                android:minLines="1"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/edittext_back"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/edittext_text"
+                />
+
+            <EditText
+                android:id="@+id/iban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Enter IBAN Number"
+                android:letterSpacing="0.05"
+                android:inputType="text"
+                android:textColorHint="@color/edittext_hint"
+                android:minLines="1"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/edittext_back"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/edittext_text"
+                android:layout_marginVertical="14dp"
+                />
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Additional Message (Optional)"
+                android:letterSpacing="0.05"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/edittext_hint"
+                android:minLines="3"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/edittext_back"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/edittext_text"
+                android:layout_marginBottom="14dp"
+                />
+
+            <TextView
+                android:id="@+id/noteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/add_bank_info_note"
+                android:letterSpacing="0.03"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/edittext_hint"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/edittext_back"
+                android:layout_marginVertical="14dp"
+                />
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:text="Submit"
+                android:textColor="@color/textview_secondary_light"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/appTheme_primary"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                android:layout_marginVertical="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

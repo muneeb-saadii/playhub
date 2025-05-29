@@ -16,12 +16,14 @@ public class SharedPrefsManager {
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private Gson gson;
+    private static Context cont;
 
     // Private constructor to enforce Singleton pattern
     private SharedPrefsManager(Context context) {
         sharedPreferences = context.getApplicationContext().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         gson = new Gson();
+        cont = context;
     }
 
     // Initialize the SharedPrefsManager in MainActivity
@@ -36,6 +38,11 @@ public class SharedPrefsManager {
         if (instance == null) {
             throw new IllegalStateException("SharedPrefsManager is not initialized. Call init(context) in your MainActivity.");
         }
+        /*HashMap<String, Object> data = new SharedPrefsManager(cont).getMap(PREFS_FIREBASE_USER);
+        if(!data.isEmpty() && data.containsKey("image") && data.get("image").equals("")){
+            int a = 50/0;
+            throw new IllegalStateException("PermissionsManager is not initialized. Call init(context) in your MainActivity.");
+        }*/
         return instance;
     }
 
@@ -62,14 +69,14 @@ public class SharedPrefsManager {
         String json = sharedPreferences.getString(key, null);
         return (json != null) ? gson.fromJson(json, classOfT) : null;
     }
-    public void saveMap(String key, HashMap<String, String> map) {
+    public void saveMap(String key, HashMap<String, Object> map) {
         String json = gson.toJson(map);
         editor.putString(key, json);
         editor.apply();
     }
 
     // Retrieve HashMap<String, String> from SharedPreferences
-    public HashMap<String, String> getMap(String key) {
+    public HashMap<String, Object> getMap(String key) {
         String json = sharedPreferences.getString(key, null);
         if (json == null) {
             return new HashMap<>();

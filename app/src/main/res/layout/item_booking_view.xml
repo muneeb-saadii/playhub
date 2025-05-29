@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#f1f1f1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="8dp"
+            android:paddingStart="16dp">
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:text="000"
+                android:textColor="@color/appTheme_primary"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="dates"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/price"
+                />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="14dp"
+                android:maxLines="1"
+                android:text="booked"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                />
+
+
+            <TextView
+                android:id="@+id/approve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:text="APPROVE"
+                android:textColor="@color/white"
+                android:paddingVertical="4dp"
+                android:paddingHorizontal="8dp"
+                android:background="@color/appTheme_primary"
+                android:layout_below="@id/status"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/chat"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:layout_below="@id/price"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_chats"
+                app:tint="@color/appTheme_primary"
+                />
+            <ImageView
+                android:id="@+id/adminBank"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="14dp"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:layout_below="@id/price"
+                android:layout_toEndOf="@id/chat"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_bank"
+                app:tint="@color/appTheme_primary"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
