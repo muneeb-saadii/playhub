@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PlayHub</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_health_issue">Search health issue....</string>
+    <string name="neeed_a_helping_hand_today">Neeed a helping hand today</string>
+    <string name="categories">Categories</string>
+
+    <string name="chats">Chats</string>
+
+</resources>

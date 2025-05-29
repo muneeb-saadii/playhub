@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@color/appTheme_accent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/double_layer_frame"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp"
+                >
+                <TextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:text="Log In"
+                    android:textColor="@color/textview_secondary_light"
+                    />
+                <TextView
+                    android:id="@+id/sloganTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:maxLines="3"
+                    android:text="Please sign in to your existing account"
+                    android:textColor="@color/textview_accent_medium"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/backImgView"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_theme_back"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:background="@drawable/bg_bottom_sheet_design"
+            android:layout_marginTop="-40dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:id="@+id/contentArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <include
+                        android:id="@+id/otpArea"
+                        android:visibility="gone"
+                        layout="@layout/layout_otp_six_digits"
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/field1Area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+                        <TextView
+                            android:id="@+id/field1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Name"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="@color/textview_secondary_dark"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_field1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:hint="Your name here"
+                                android:letterSpacing="0.05"
+                                android:inputType="text"
+                                android:textColorHint="@color/edittext_hint"
+                                android:maxLines="1"
+                                android:background="@drawable/add_border"
+                                android:backgroundTint="@color/edittext_back"
+                                android:paddingHorizontal="14dp"
+                                android:paddingVertical="16dp"
+                                android:textColor="@color/edittext_text"
+                                />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_eye_on"
+                                android:layout_marginEnd="14dp"
+                                android:visibility="gone"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                />
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/field2Area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/field2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Email"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="@color/textview_secondary_dark"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_field2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:hint="example@email.com"
+                                android:letterSpacing="0.05"
+                                android:inputType="textEmailAddress"
+                                android:textColorHint="@color/edittext_hint"
+                                android:maxLines="1"
+                                android:background="@drawable/add_border"
+                                android:backgroundTint="@color/edittext_back"
+                                android:paddingHorizontal="14dp"
+                                android:paddingVertical="16dp"
+                                android:textColor="@color/edittext_text"
+                                />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_eye_on"
+                                android:layout_marginEnd="14dp"
+                                android:visibility="gone"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                />
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/field3Area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        >
+                        <TextView
+                            android:id="@+id/field3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Password"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="@color/textview_secondary_dark"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_field3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:hint="**********"
+                                android:letterSpacing="0.2"
+                                android:inputType="textPassword"
+                                android:textColorHint="@color/edittext_hint"
+                                android:maxLines="1"
+                                android:background="@drawable/add_border"
+                                android:backgroundTint="@color/edittext_back"
+                                android:paddingHorizontal="14dp"
+                                android:paddingVertical="16dp"
+                                android:textColor="@color/edittext_text"
+                                />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_eye_on"
+                                android:layout_marginEnd="14dp"
+                                android:visibility="gone"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                />
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/field4Area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+                        <TextView
+                            android:id="@+id/field4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Re-Type Password"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="@color/textview_secondary_dark"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_field4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:hint="**********"
+                                android:letterSpacing="0.2"
+                                android:inputType="textPassword"
+                                android:textColorHint="@color/edittext_hint"
+                                android:maxLines="1"
+                                android:background="@drawable/add_border"
+                                android:backgroundTint="@color/edittext_back"
+                                android:paddingHorizontal="14dp"
+                                android:paddingVertical="16dp"
+                                android:textColor="@color/edittext_text"
+                                />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_eye_on"
+                                android:layout_marginEnd="14dp"
+                                android:visibility="gone"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                />
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/operationArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <CheckBox
+                            android:id="@+id/checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:maxLines="1"
+                            android:text="Remember me"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textview_accent_dark"
+                            android:buttonTint="@color/edittext_hint"
+                            />
+                        <TextView
+                            android:id="@+id/forgetPassTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="Forgot Password"
+                            android:maxLines="1"
+                            android:textColor="@color/textview_primary"
+                            />
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/tv_type1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:maxLines="1"
+                        android:text="Log In"
+                        android:textColor="@color/textview_secondary_light"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:background="@drawable/add_border"
+                        android:backgroundTint="@color/appTheme_primary"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="16dp"
+                        android:layout_marginVertical="20dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/pbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:indeterminateTint="@color/appTheme_primary_light"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/signupOptnArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginVertical="16dp"
+                        android:gravity="center_horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Don't have an account?"
+                                android:textColor="@color/textview_accent_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                />
+
+                            <TextView
+                                android:id="@+id/gotoSignup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Sign Up"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textview_primary"
+                                android:textSize="14sp"
+                                android:layout_marginStart="8dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-&#45;&#45;&#45;&#45;&#45;&#45; OR -&#45;&#45;&#45;&#45;&#45;&#45;"
+                            android:textColor="@color/textview_accent_dark"
+                            android:textSize="14sp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginBottom="4dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            >
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:cardCornerRadius="100dp"
+                                app:cardElevation="5dp"
+                                >
+                                <ImageView
+                                    android:id="@+id/iv_facebookOptn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_fb_logo"
+                                    app:tint="#395998"
+                                    android:scaleType="fitCenter"
+                                    android:padding="16dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:cardCornerRadius="100dp"
+                                app:cardElevation="5dp"
+                                android:layout_marginHorizontal="20dp"
+                                >
+                                <ImageView
+                                    android:id="@+id/iv_twitterOptn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_twitter_logo"
+                                    app:tint="#169CE8"
+                                    android:scaleType="fitCenter"
+                                    android:padding="16dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="100dp"
+                                app:cardElevation="5dp"
+                                >
+                                <ImageView
+                                    android:id="@+id/iv_googleOptn"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_google_logo"
+                                    android:scaleType="fitCenter"
+                                    android:padding="16dp"
+                                    />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+    </LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/root_lay"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/appTheme_secondary_light"
+        >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/onboarding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appTheme_secondary_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/slider_view"
+            />
+
+        <LinearLayout
+            android:id="@+id/slider_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/next_btn"
+            app:layout_constraintTop_toBottomOf="@id/onboarding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="15dp"
+                android:layout_height="5dp"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/appTheme_primary"
+                />
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="15dp"
+                android:layout_height="5dp"
+                android:background="@drawable/add_border"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/appTheme_primary_light"
+                />
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="15dp"
+                android:layout_height="5dp"
+                android:background="@drawable/add_border"
+                android:backgroundTint="@color/appTheme_primary_light"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:background="@drawable/add_border"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingVertical="14dp"
+            android:textAlignment="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:paddingHorizontal="20dp"
+            android:backgroundTint="@color/appTheme_primary"
+            app:layout_constraintBottom_toTopOf="@id/skip_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/skip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/appTheme_accent_light"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="14dp"
+            android:layout_marginBottom="20dp"
+            app:layout_goneMarginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

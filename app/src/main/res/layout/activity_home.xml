@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.HomeActivity">
+
+
+    <FrameLayout
+        android:id="@+id/nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_bg"
+        android:backgroundTint="@color/app_themeColor_350"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bottom_nav_bg"
+            android:backgroundTint="@color/app_themeColor_1"
+            >
+
+            <RelativeLayout
+                android:id="@+id/nav_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/homeImg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nav_chat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/chatImg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_chats"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/addOptionArea"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="50dp"
+                    android:elevation="0dp"
+                    android:padding="0dp"
+                    app:strokeWidth="0dp"
+                    android:paddingBottom="3dp"
+                    android:theme="@style/Theme.MaterialComponents"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/expensive_gradient"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nav_booking"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/recordsImg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_records"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nav_profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_my_profile"
+                    app:tint="@color/unselectedMenuItem" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

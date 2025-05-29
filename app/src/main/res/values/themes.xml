@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Play" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Play" parent="Base.Theme.Play" />
+
+    <style name="Theme.BottomNavigation" parent="Theme.Play">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lavender</item>
+        <item name="colorPrimaryVariant">@color/lavender</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/appTheme_accent</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Play.Splash" parent="Theme.Play.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lavender</item>
+        <item name="colorPrimaryVariant">@color/lavender</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Play.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/appTheme_accent</item>
+    </style>
+
+    <style name="Theme.Play.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Play.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

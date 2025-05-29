@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1007525307438",
+    "project_id": "playhub-7ff0a",
+    "storage_bucket": "playhub-7ff0a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007525307438:android:cb25ec2f04f2ad62d92bbf",
+        "android_client_info": {
+          "package_name": "com.project.playhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3Oc0dzXl0maqQgJuLB7YDws8zGNUC0W8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
